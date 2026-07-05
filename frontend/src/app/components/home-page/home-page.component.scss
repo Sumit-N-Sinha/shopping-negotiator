@@ -1,0 +1,139 @@
+.page-shell {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+  color: #f8fafc;
+  padding: 32px;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.hero-card {
+  max-width: 1120px;
+  margin: 0 auto 24px;
+  padding: 32px;
+  border-radius: 24px;
+  background: rgba(15, 23, 42, 0.7);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.8rem;
+  color: #bfdbfe;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin: 8px 0;
+}
+
+.subtitle {
+  max-width: 640px;
+  color: #cbd5e1;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.search-box input,
+.filters select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 999px;
+  font-size: 1rem;
+}
+
+.search-box button,
+.deal-card button {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: #38bdf8;
+  color: #082f49;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 200px;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.results-panel {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.section-heading h2 {
+  margin-bottom: 4px;
+}
+
+.section-heading p {
+  color: #cbd5e1;
+}
+
+.deal-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.deal-card {
+  background: #ffffff;
+  color: #0f172a;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(2, 8, 23, 0.2);
+}
+
+.badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.seller,
+.delivery {
+  color: #475569;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    padding: 18px;
+  }
+
+  .hero-card {
+    padding: 22px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+}
