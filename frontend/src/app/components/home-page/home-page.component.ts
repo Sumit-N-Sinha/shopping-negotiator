@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { SearchService } from '../../services/search.service';
 
 interface Deal {
   title: string;
@@ -15,10 +16,17 @@ interface Deal {
   selector: 'app-home-page',
   standalone: true,
   imports: [CommonModule, FormsModule],
+  providers: [SearchService],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent {
+export class HomePageComponent implements OnInit {
+  constructor(private readonly searchService: SearchService) {}
+
+  ngOnInit(): void {
+    this.search();
+  }
+
   query = '';
   selectedMode = 'text';
   selectedCategory = 'electronics';
@@ -49,7 +57,13 @@ export class HomePageComponent {
     }
   ];
 
-  search() {
-    console.log('Searching for:', this.query, this.selectedMode, this.selectedCategory);
+  async search() {
+    const result = await this.searchService.search({
+      query: this.query || 'laptop',
+      mode: this.selectedMode,
+      category: this.selectedCategory
+    });
+
+    this.deals = result.deals ?? this.deals;
   }
 }
