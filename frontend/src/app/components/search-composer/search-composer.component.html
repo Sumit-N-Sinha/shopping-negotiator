@@ -1,0 +1,33 @@
+<section class="search-hero" id="top">
+  <h1>Find the best deal.<br />Negotiate smarter. Pay less.</h1>
+  <p>Your AI co-pilot that finds real discounts, predicts price drops, and negotiates on your behalf.</p>
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <input
+        [(ngModel)]="query"
+        name="query"
+        type="text"
+        placeholder="Paste a product link, upload an image, or ask for the best deal..."
+        (keydown.enter)="submit()"
+      />
+      <input #imageInput class="file-input" type="file" accept="image/*" aria-label="Choose a product image" (change)="onImageSelected($event)" />
+      <button class="attach-button" type="button" (click)="imageInput.click()" aria-label="Attach an image">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+        <span>Attach image</span>
+      </button>
+      <button class="search-submit" type="button" (click)="submit()">Find Deals <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+  <div class="attachment-preview" *ngIf="imagePreview as preview">
+    <img [src]="preview" alt="Selected product" />
+    <span>{{ imageName }}</span>
+    <button type="button" (click)="removeImage(imageInput)" aria-label="Remove attached image">Remove</button>
+  </div>
+  <p class="attachment-error" *ngIf="attachmentError" role="alert">{{ attachmentError }}</p>
+  <div class="suggestions">
+    <span>Try:</span>
+    <button type="button" (click)="trySearch('Sony WH-1000XM5 headphones')">Sony WH-1000XM5 headphones</button>
+    <button type="button" (click)="trySearch('iPhone 15 Pro 256GB')">iPhone 15 Pro 256GB</button>
+    <button type="button" (click)="trySearch('Nike Air Max 270')">Nike Air Max 270</button>
+  </div>
+</section>

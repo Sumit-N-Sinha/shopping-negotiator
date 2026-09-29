@@ -1,0 +1,10 @@
+<div class="sort-bar" aria-label="Sort deals">
+  <span>Sort by:</span>
+  <button
+    *ngFor="let option of options"
+    type="button"
+    [class.active]="active === option"
+    [attr.aria-pressed]="active === option"
+    (click)="activeChange.emit(option)"
+  >{{ option }}</button>
+</div>

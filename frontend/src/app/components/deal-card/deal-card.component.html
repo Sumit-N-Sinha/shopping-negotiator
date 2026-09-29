@@ -1,0 +1,25 @@
+<article class="deal-card">
+  <img class="product-image" [src]="deal.image" [alt]="deal.title" />
+  <div class="deal-content">
+    <div class="seller-line"><strong>{{ deal.platform }}</strong><span>{{ deal.seller }}</span></div>
+    <h3>{{ deal.title }}</h3>
+    <div class="rating-line"><span class="stars" aria-label="Rated">★★★★★</span><span>{{ deal.rating }} reviews</span><span class="match-score">{{ deal.match }}% match</span></div>
+    <div class="cost-breakdown">
+      <div><span>Base Price</span><span>{{ deal.basePrice }}</span></div>
+      <div><span>GST (18%)</span><span>+ {{ deal.tax }}</span></div>
+      <div><span>Shipping</span><span>{{ deal.shipping }}</span></div>
+      <div class="total-row"><strong>True Total Cost</strong><strong>{{ deal.price }}</strong></div>
+    </div>
+    <div class="deal-insights">
+      <span class="discount-note" [class.warning]="deal.isFakeDiscount">{{ deal.badge }}</span>
+      <span class="insight"><span>Price Drop Probability</span><strong>{{ deal.dropChance }}% in {{ deal.dropWindow }}</strong></span>
+      <span class="insight"><span>{{ deal.negotiation }}</span><strong *ngIf="deal.negotiationCode">Try code {{ deal.negotiationCode }}</strong></span>
+    </div>
+  </div>
+  <div class="deal-actions">
+    <div class="deal-price"><strong>{{ deal.price }}</strong><span>true total cost</span></div>
+    <button type="button" class="offer-button">Open Deal <span aria-hidden="true">↗</span></button>
+    <button type="button" class="text-button">Price History</button>
+    <button type="button" class="text-button">Negotiate Price</button>
+  </div>
+</article>
