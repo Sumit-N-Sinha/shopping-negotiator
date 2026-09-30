@@ -6,7 +6,8 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-search-composer',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './search-composer.component.html'
+  templateUrl: './search-composer.component.html',
+  styleUrls: ['./search-composer.component.scss']
 })
 export class SearchComposerComponent {
   @Output() searchRequested = new EventEmitter<{ query: string; image?: string }>();

@@ -5,7 +5,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-deal-sort-bar',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './deal-sort-bar.component.html'
+  templateUrl: './deal-sort-bar.component.html',
+  styleUrls: ['./deal-sort-bar.component.scss']
 })
 export class DealSortBarComponent {
   @Input() options: string[] = [];

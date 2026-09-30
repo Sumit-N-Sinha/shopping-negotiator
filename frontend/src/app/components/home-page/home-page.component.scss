@@ -1,0 +1,67 @@
+:host {
+  display: block;
+}
+
+.page-shell {
+  min-height: 100vh;
+  background: #f7f8f6;
+  color: #18211d;
+  font-family: 'DM Sans', 'Avenir Next', sans-serif;
+}
+
+main {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.results-panel {
+  padding-bottom: 48px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 0 13px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #202a25;
+  font-size: 18px;
+}
+
+.section-heading p,
+.section-heading > span {
+  margin: 5px 0 0;
+  color: #849088;
+  font-size: 12px;
+}
+
+.section-heading > span {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.deal-list {
+  display: grid;
+  gap: 12px;
+}
+
+.results-note {
+  margin: 16px 0 0;
+  color: #87918b;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: calc(100% - 28px);
+  }
+
+  .section-heading h2 {
+    font-size: 16px;
+  }
+}

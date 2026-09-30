@@ -6,7 +6,8 @@ import { Deal } from '../../models/deal';
   selector: 'app-deal-card',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './deal-card.component.html'
+  templateUrl: './deal-card.component.html',
+  styleUrls: ['./deal-card.component.scss']
 })
 export class DealCardComponent {
   @Input({ required: true }) deal!: Deal;

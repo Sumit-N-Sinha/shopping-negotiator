@@ -13,6 +13,7 @@ import { SiteHeaderComponent } from '../site-header/site-header.component';
   imports: [CommonModule, SiteHeaderComponent, SearchComposerComponent, DealSortBarComponent, DealCardComponent],
   providers: [SearchService],
   templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
   constructor(private readonly searchService: SearchService) {}

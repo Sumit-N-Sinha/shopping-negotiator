@@ -1,0 +1,122 @@
+:host {
+  display: block;
+}
+
+.topbar {
+  height: 72px;
+  padding: 0 max(24px, calc((100vw - 1240px) / 2));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e7ebe7;
+  background: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #18211d;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #176b52;
+  color: #fff;
+}
+
+.brand-mark svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.copilot-tag {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 11px;
+  border: 1px solid #d9d7ff;
+  border-radius: 99px;
+  background: #f4f3ff;
+  color: #4b3cdb;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.copilot-tag span {
+  color: #4b3cdb;
+  font-size: 13px;
+}
+
+.topnav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.topnav a {
+  color: #707b8e;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.topnav a:hover {
+  color: #4b3cdb;
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    height: auto;
+    min-height: 92px;
+    padding: 8px 14px;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .topbar-actions {
+    flex-basis: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .copilot-tag {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .topnav {
+    gap: 18px;
+  }
+
+  .topnav a {
+    font-size: 13px;
+  }
+}

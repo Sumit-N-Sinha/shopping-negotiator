@@ -1,22 +1,20 @@
 <div class="page-shell">
-  <header class="topbar">
-    <a class="brand" href="#top" aria-label="Personal Shopping Negotiator home">
-      <span class="brand-mark" aria-hidden="true">S</span>
-      <div class="page-shell">
-        <app-site-header />
-        <app-search-composer (searchRequested)="search($event)" />
-        <main>
-          <section class="results-panel" id="results">
-            <app-deal-sort-bar [options]="sortOptions" [active]="activeSort" (activeChange)="setSort($event)" />
-            <div class="section-heading">
-              <div><h2>{{ deals.length }} results across platforms</h2><p>Prices include all charges</p></div>
-              <span>Updated just now</span>
-            </div>
-            <div class="deal-list">
-              <app-deal-card *ngFor="let deal of sortedDeals" [deal]="deal" />
-            </div>
-            <p class="results-note">Prices and availability verified in real time · True Total Cost includes GST, platform fees &amp; delivery</p>
-          </section>
-        </main>
+  <app-site-header />
+  <app-search-composer (searchRequested)="search($event)" />
+  <main>
+    <section class="results-panel" id="results">
+      <app-deal-sort-bar [options]="sortOptions" [active]="activeSort" (activeChange)="setSort($event)" />
+      <div class="section-heading">
+        <div>
+          <h2>{{ deals.length }} results across platforms</h2>
+          <p>Prices include all charges</p>
+        </div>
+        <span>Updated just now</span>
       </div>
-            (keydown.enter)="search()"
+      <div class="deal-list">
+        <app-deal-card *ngFor="let deal of sortedDeals" [deal]="deal" />
+      </div>
+      <p class="results-note">Prices and availability verified in real time · True Total Cost includes GST, platform fees &amp; delivery</p>
+    </section>
+  </main>
+</div>

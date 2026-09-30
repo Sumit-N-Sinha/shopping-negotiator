@@ -1,0 +1,42 @@
+:host {
+  display: block;
+}
+
+.sort-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 11px 0 16px;
+  border-bottom: 1px solid #e2e7e3;
+}
+
+.sort-bar > span {
+  flex: 0 0 auto;
+  color: #78837d;
+  font-size: 12px;
+}
+
+.sort-bar button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-height: 33px;
+  padding: 0 11px;
+  border: 1px solid #e0e6e2;
+  border-radius: 6px;
+  background: #fff;
+  color: #58645e;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.sort-bar button.active {
+  border-color: #176b52;
+  background: #edf6f1;
+  color: #176b52;
+}
